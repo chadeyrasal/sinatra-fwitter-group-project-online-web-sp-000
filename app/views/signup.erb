@@ -1,3 +1,7 @@
+<% if flash.has?(:signup_error) %>
+  <%= flash[:signup_error] %>
+<% end %>
+
 <h1>Sign Up Here: </h1>
 
 <form action="/signup" method="post">
