@@ -140,9 +140,9 @@ class ApplicationController < Sinatra::Base
   get '/logout' do
     if Helpers.is_logged_in?(session)
       session.clear
-      redirect to '/login'
-    else
       redirect to '/'
+    else
+      redirect to '/login'
     end
   end
 
