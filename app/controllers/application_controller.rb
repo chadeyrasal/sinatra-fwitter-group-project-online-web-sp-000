@@ -72,7 +72,7 @@ class ApplicationController < Sinatra::Base
     if !Helpers.is_logged_in?(session)
       redirect to '/login'
     end
-    erb :"/tweets/create_tweet"
+    erb :"/tweets/new"
   end
 
   post '/tweets' do
