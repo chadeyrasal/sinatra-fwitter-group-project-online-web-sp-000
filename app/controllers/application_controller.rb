@@ -127,7 +127,6 @@ class ApplicationController < Sinatra::Base
       flash[:wrong_user] = "Sorry you can only delete your own tweets"
       redirect to '/tweets'
     end
-    binding.pry
     @tweet.destroy
     redirect to '/tweets'
   end
