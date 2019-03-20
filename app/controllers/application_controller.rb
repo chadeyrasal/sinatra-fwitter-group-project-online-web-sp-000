@@ -33,8 +33,8 @@ class ApplicationController < Sinatra::Base
       end
     end
 
-    user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
-    session[:user_id] = user.id
+    @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
+    session[:user_id] = @user.id
 
     redirect "/tweets"
   end
