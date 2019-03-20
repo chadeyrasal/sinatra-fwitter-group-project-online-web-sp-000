@@ -27,6 +27,8 @@ class ApplicationController < Sinatra::Base
 
   post "/signup" do
     params.each do |label, user_input|
+      if input.empty?
+      end
     end
 
 
