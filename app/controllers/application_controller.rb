@@ -128,6 +128,7 @@ class ApplicationController < Sinatra::Base
       redirect to '/tweets'
     end
     @tweet.destroy
+    binding.pry
     redirect to '/tweets'
   end
 
