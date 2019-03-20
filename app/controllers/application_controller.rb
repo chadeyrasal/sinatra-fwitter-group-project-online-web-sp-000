@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
 
   enable :sessions
   use Rack::Flash
-  
+
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
@@ -26,6 +26,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
+    params.each do ||
+    end
+
+
     user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
     if !user.save
       redirect "/signup"
