@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/signup" do
-    if Helpers.is_logged_in?
+    if Helpers.is_logged_in?(session)
       redirect "/tweets"
     end
 
