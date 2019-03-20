@@ -54,6 +54,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/tweets" do
+    @user = current_user
     @tweets = Tweet.all
     erb :"tweets/index"
   end
