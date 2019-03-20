@@ -3,7 +3,7 @@ ENV["SINATRA_ENV"] ||= "development"
 require_relative './config/environment'
 require 'sinatra/activerecord/rake'
 
-rake :console do
+rake console: do
   Pry.start
 end
 
