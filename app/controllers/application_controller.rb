@@ -91,7 +91,7 @@ class ApplicationController < Sinatra::Base
       redirect to '/login'
     end
     @tweet = Tweet.find(params[:id])
-    erb :"tweets/show_tweet"
+    erb :"tweets/show"
   end
 
   get '/tweets/:id/edit' do
