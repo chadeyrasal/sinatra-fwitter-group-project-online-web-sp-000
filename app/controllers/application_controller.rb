@@ -29,6 +29,7 @@ class ApplicationController < Sinatra::Base
     params.each do |label, user_input|
       if input.empty?
         flash[:signup_error] = "Please enter a value for #{label}"
+        redirect "/signup"
       end
     end
 
