@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
       redirect to '/tweets'
     end
 
-    erb :"/users/create_user"
+    erb :"signup"
   end
 
   post '/signup' do
