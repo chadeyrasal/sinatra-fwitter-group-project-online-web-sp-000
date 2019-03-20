@@ -65,7 +65,7 @@ class ApplicationController < Sinatra::Base
     end
     @tweets = Tweet.all
     @user = Helpers.current_user(session)
-    erb :"/tweets/tweets"
+    erb :"/tweets/index"
   end
 
   get '/tweets/new' do
