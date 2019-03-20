@@ -118,7 +118,7 @@ class ApplicationController < Sinatra::Base
     redirect to "/tweets/#{tweet.id}"
   end
 
-  post '/tweets/:id/delete' do
+  delete '/tweets/:id' do
     if !Helpers.is_logged_in?(session)
       redirect to '/login'
     end
