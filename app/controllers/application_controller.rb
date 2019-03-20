@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
-    params.each do ||
+    params.each do |label, user_input|
     end
 
 
